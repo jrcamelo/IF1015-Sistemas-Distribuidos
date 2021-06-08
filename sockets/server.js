@@ -1,4 +1,9 @@
 const net = require('net')
+const readline = require('readline')
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
 
 const users = {}
 net.createServer(function(socket) {
@@ -62,5 +67,12 @@ net.createServer(function(socket) {
     console.log(senderLabel + message)
   }
 }).listen(4000, "localhost")
+
+rl.addListener('line', line => {
+  // Send the message to everyone as the server
+  for (const name of Object.keys(users)) {
+    users[name].write("Server >>> " + line)
+  }
+})
 
 console.log("Server is open!")
