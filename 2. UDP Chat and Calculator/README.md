@@ -22,7 +22,6 @@ Não saber nem ou se importar que o usuário se desconectou, podendo manter as i
 
 ## Quais as principais dificuldades nas implementações UDP?  
 Ter que lidar diretamente com as informações da conexão ao invés de um socket  
-Em especial, ter o mesmo IP quando testando no mesmo computador  
 
 ## Quando faz sentido usar TCP ou UDP?  
 Em casos que é necessário um processo de "handshake", e quando é relevante saber que o cliente se desconectou, TCP é mais prático.  
