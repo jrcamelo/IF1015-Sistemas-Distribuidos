@@ -2,6 +2,9 @@ const dgram = require("dgram")
 const readline = require('readline')
 
 const socket = dgram.createSocket("udp4")
+
+// Connection Info as keys and User objects as values
+// Could be simpler with Connection Info as keys but Name string as values
 const users = {}
 
 class User {
