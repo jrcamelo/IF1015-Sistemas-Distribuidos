@@ -16,11 +16,6 @@ client.on('message', function(data) {
 let request = new Uint32Array(3)
 let index = 0
 rl.addListener('line', line => {
-  if (isNaN(line)) {
-    console.log("Not a number!")
-    return reset()
-  }
-
   request[index] = parseInt(line)
   index += 1
   if (index == 3) {
