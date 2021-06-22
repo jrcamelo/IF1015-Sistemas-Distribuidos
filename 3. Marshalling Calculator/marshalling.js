@@ -1,34 +1,34 @@
 module.exports.serverMarshaller = function(status, result) {
-  const buffer = Buffer.allocUnsafe(128)
-  buffer.write(status.toString())
-  buffer.write(result.toString(), 64)
+  const buffer = Buffer.alloc(64)
+  buffer.writeInt32BE(status)
+  buffer.writeInt32BE(result, 32)
   return buffer
 }
 
 module.exports.clientMarshaller = function(operator, first, second) {
-  const buffer = Buffer.allocUnsafe(192)
-  buffer.write(operator.toString())
-  buffer.write(first.toString(), 64)
-  buffer.write(second.toString(), 128)
+  const buffer = Buffer.alloc(72)
+  buffer.writeInt8(operator)
+  buffer.writeInt32BE(first, 8)
+  buffer.writeInt32BE(second, 40)
   return buffer
 }
 
 module.exports.serverUnmarshaller = function(data) {
-  if (data.length == 192) {
+  if (data.length == 72) {
     return {
-      operator: parseInt(data.slice(0, 64)),
-      first:    parseInt(data.slice(64, 128)),
-      second:   parseInt(data.slice(128))
+      operator: data.readInt8(),
+      first:    data.readInt32BE(8),
+      second:   data.readInt32BE(40),
     }
   }
   return null
 }
 
 module.exports.clientUnmarshaller = function(data) {
-  if (data.length == 128) {
+  if (data.length == 64) {
     return {
-      status: parseInt(data.slice(0, 64)),
-      result: parseInt(data.slice(64)),
+      status: data.readInt32BE(),
+      result: data.readInt32BE(32),
     }
   }
   return null
