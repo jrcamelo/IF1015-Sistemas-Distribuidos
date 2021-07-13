@@ -40,5 +40,5 @@ module.exports = class Client {
     console.log("A: " + text)
     callback(null, { "received": true });
   }
-
+  
 }
