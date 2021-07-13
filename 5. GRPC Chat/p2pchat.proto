@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package chatPackage;
+
+service Chat {
+  rpc sendMessage(Message) returns (Receipt);
+}
+
+message Message {
+  string text = 1;
+}
+
+message Receipt {
+  bool received = 1;
+}
