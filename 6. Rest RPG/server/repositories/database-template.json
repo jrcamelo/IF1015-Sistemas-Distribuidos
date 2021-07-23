@@ -1,0 +1,105 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Slime",
+    "lvl": 1,
+    "gold": 5,
+    "xp": 10,
+    "drops": [
+      "Slime parts",
+      "Potion"
+    ],
+    "killed": 0
+  },
+  "2": {
+    "id": 2,
+    "name": "Living Fungus",
+    "lvl": 2,
+    "gold": 5,
+    "xp": 30,
+    "drops": [
+      "Mushroom",
+      "Antidote",
+      "Potion"
+    ],
+    "killed": 0
+  },
+  "3": {
+    "id": 3,
+    "name": "Wild Wolf",
+    "lvl": 3,
+    "gold": 20,
+    "xp": 50,
+    "drops": [
+      "Wolf Pelt",
+      "Wolf Fang"
+    ],
+    "killed": 0
+  },
+  "4": {
+    "id": 4,
+    "name": "Alpha Wolf",
+    "lvl": 4,
+    "gold": 50,
+    "xp": 150,
+    "drops": [
+      "Wolf Pelt",
+      "Wolf Fang",
+      "Giant Wolf Fang",
+      "Wild Ring"
+    ],
+    "killed": 0
+  },
+  "5": {
+    "id": 5,
+    "name": "Bandit",
+    "lvl": 6,
+    "gold": 100,
+    "xp": 200,
+    "drops": [
+      "Knife",
+      "Sword",
+      "Scrap Armor",
+      "Stolen Goods"
+    ],
+    "killed": 0
+  },
+  "6": {
+    "id": 6,
+    "name": "Bandit Leader",
+    "lvl": 7,
+    "gold": 500,
+    "xp": 400,
+    "drops": [
+      "Sword",
+      "Leather Armor",
+      "Leather Helmet"
+    ],
+    "killed": 0
+  },
+  "7": {
+    "id": 7,
+    "name": "Wyvern",
+    "lvl": 8,
+    "gold": 200,
+    "xp": 500,
+    "drops": [
+      "Dragon Scale",
+      "Dragon Fang"
+    ],
+    "killed": 0
+  },
+  "8": {
+    "id": 8,
+    "name": "Dragon",
+    "lvl": 10,
+    "gold": 1000,
+    "xp": 1000,
+    "drops": [
+      "Dragon Scale",
+      "Giant Dragon Fang",
+      "Dragon Fang"
+    ],
+    "killed": 0
+  }
+}
