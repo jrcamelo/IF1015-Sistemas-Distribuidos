@@ -42,4 +42,4 @@ GET, POST, PUT e DELETE
   
   
 ## Resultado no cliente
-![Resultado](/Screenshot.png)
+![Resultado](Screenshot.png)
