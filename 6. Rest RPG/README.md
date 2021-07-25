@@ -42,27 +42,4 @@ GET, POST, PUT e DELETE
   
   
 ## Resultado no cliente
-```
-Welcome adventurer, what would you like to do?
-  1. See list of all monsters with GET /monsters
-  2. Check info on a specific monster with GET /monsters/:id
-  3. Battle a monster and get its spoils with POST /monsters/:id/battle/
-  4. Just kill a monster and waste its drops with PUT /monsters/:id/murder/
-  5. Decimate a monster from history itself with DELETE /monsters/:id/absolutelydestroy/     
-
-  1
-┌─────────┬────┬─────────────────┬─────┬────────┐
-│ (index) │ id │      name       │ lvl │ killed │
-├─────────┼────┼─────────────────┼─────┼────────┤
-│    0    │ 1  │     'Slime'     │  1  │   1    │
-│    1    │ 2  │ 'Living Fungus' │  2  │   0    │
-│    2    │ 3  │   'Wild Wolf'   │  3  │   0    │
-│    3    │ 4  │  'Alpha Wolf'   │  4  │   0    │
-│    4    │ 5  │    'Bandit'     │  6  │   0    │
-│    5    │ 6  │ 'Bandit Leader' │  7  │   0    │
-│    6    │ 7  │    'Wyvern'     │  8  │   0    │
-│    7    │ 8  │    'Dragon'     │ 10  │   0    │
-└─────────┴────┴─────────────────┴─────┴────────┘
-
-Press any key to continue...
-```
+![Resultado](/Screenshot.png)
