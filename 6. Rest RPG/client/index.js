@@ -7,8 +7,8 @@ function gameplay() {
   1. See list of all monsters with GET /monsters
   2. Check info on a specific monster with GET /monsters/:id
   3. Battle a monster and get its spoils with POST /monsters/:id/battle/
-  4. Just kill a monster and waste its drops with PUT /monsters/:id/murder/
-  5. Decimate a monster from history itself with DELETE /monsters/:id/absolutelydestroy/
+  4. Cold-bloodedly kill all monsters of a type with PUT /monsters/:id/murder/9999
+  5. Decimate a monster from history itself with DELETE /monsters/:id/destroy/
 
   `)
   switch (menu) {
@@ -126,7 +126,7 @@ function doMurder() {
   const options = {
     hostname: 'localhost',
     port: 8080,
-    path: `/monsters/${id}/murder`,
+    path: `/monsters/${id}/murder/9999`,
     method: 'PUT'
   }
   const req = require('http').request(options, (res) => {
@@ -154,7 +154,7 @@ function doDecimate() {
   const options = {
     hostname: 'localhost',
     port: 8080,
-    path: `/monsters/${id}/absolutelydestroy`,
+    path: `/monsters/${id}/destroy`,
     method: 'DELETE'
   }
   const req = require('http').request(options, (res) => {
