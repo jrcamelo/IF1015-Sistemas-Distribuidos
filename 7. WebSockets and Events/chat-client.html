@@ -1,0 +1,33 @@
+<h1>WebSocket Chat</h1>
+<pre id="chat" style="width: 800px; height: 500px; overflow: scroll"></pre>
+<input type="text" id="textBox" placeholder="Message text" style="display: block; width: 800px; margin-bottom: 10px; padding: 10px;" />
+<button id="send" title="Send" style="width: 800px; height: 30px;">Send</button>
+
+<script>
+  (function chatClient() {
+    const sendButton = document.querySelector('#send');
+    const chat = document.querySelector('#chat');
+    const textBox = document.querySelector('#textBox');
+
+    let connection
+
+    function init() {
+      connection = new WebSocket('ws://localhost:8080/');
+      connection.onmessage = showMessage;
+
+      connection.onclose = init
+    }
+
+    function showMessage(message) {
+      chat.textContent += `\n\n${message.data}`;
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    sendButton.onclick = function() {
+      connection.send(textBox.value);
+      textBox.value = '';
+    }
+
+    init();
+  })();
+</script>

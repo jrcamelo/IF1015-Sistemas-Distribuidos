@@ -1,0 +1,14 @@
+<html>
+<script language="javascript">
+var source = new EventSource("http://localhost:9090");
+source.onmessage = function(event) {
+  const result = document.getElementById("chat")
+    result.innerHTML += event.data + "<br>";
+};
+</script>
+<body>
+  <form>
+    <div id="chat"></result>
+  </form>
+</body>
+</html>

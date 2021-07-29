@@ -19,5 +19,12 @@ Ze: LOL
 Crie um recurso HTTP (i.e. uma URL) que representará uma visão “read-only” do chat. A implementação deverá utilizar Server-sent events para disponibilizar as mensagens da conversa do chat à medida que vão sendo enviadas pelos clientes que estão conectados ao chat, funcionando como um feed.  
 
 ## Questões para discussão:  
-Quais as principais diferenças entre esta implementação e a implementação com sockets TCP?  
-Quais as principais dificuldades com a implementação usando EventSource?  
+### Quais as principais diferenças entre esta implementação e a implementação com sockets TCP?  
+Estar diretamente acoplado em um HTML faz bastante diferença por conta da UI  
+Senti que com WebSockets a comunicação ficou menos rígida  
+
+### Quais as principais dificuldades com a implementação usando EventSource?  
+Ser via de mão única deixa as coisas mais limitadas, mas não teve problema  
+
+## Resultado no cliente
+![Resultado](Screenshot.png)
