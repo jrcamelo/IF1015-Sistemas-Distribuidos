@@ -21,7 +21,7 @@ Muita intercomunicação entre diferentes serviços, um grande vai e vem de info
 
 
 ## Screenshots
-![Resultado](invalid-voltage-sse.png)
-![Resultado](queue-voltage.png)
-![Resultado](queue-all-results.png)
-![Resultado](queue-invalid-voltage.png)
+![Resultado](invalid-voltage-sse.png)  
+![Resultado](queue-voltage.png)  
+![Resultado](queue-all-results.png)  
+![Resultado](queue-invalid-voltage.png)  
